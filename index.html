@@ -397,6 +397,25 @@ const COMPETENCES = [
     exempleOral: "En tant que référent d'une équipe pendant le hackathon, j'ai pris le temps de comprendre ce qui la bloquait avant de proposer une solution, plutôt que d'appliquer la même méthode à toutes les équipes.",
   },
   {
+    key: "controle",
+    titre: "Se contrôler, être respectueux de soi-même et des autres",
+    definition: "Se connaître afin de mieux interagir avec les autres dans des situations stressantes, gérer ses émotions, savoir écouter les émotions des autres, avoir conscience qu'il est important d'accueillir les thèses des autres et reconnaître que son idée n'est pas forcément la meilleure et puisse être mise de côté.",
+    illustration: "Je sais rester maître de moi-même.",
+    items: [
+      { angle: "action", text: "Pendant la construction du dossier de candidature, j'ai accepté qu'une partie que j'avais proposée soit retravaillée par un autre pilote, sans chercher à la défendre coûte que coûte." },
+      { angle: "perception", text: "Les autres pilotes savaient qu'ils pouvaient me contredire sans que je le prenne mal." },
+      { angle: "autres", text: "Un pilote a modifié son propre avis après un échange avec moi, sans que je l'aie poussé à le faire." },
+      { angle: "importance", text: "Une bonne idée qui ne survit pas à la discussion collective n'est pas forcément une mauvaise idée." },
+      { angle: "action", text: "Face à un désaccord avec un autre pilote sur une proposition, j'ai pris le temps de comprendre son point de vue avant de maintenir ou de revoir le mien." },
+      { angle: "perception", text: "On me considérait comme quelqu'un qui restait posé même quand une discussion tournait au désaccord." },
+      { angle: "autres", text: "Un mentor m'a confié la gestion d'un point de tension entre deux membres de mon groupe, en sachant que je ne prendrais pas parti trop vite." },
+      { angle: "importance", text: "Rester maître de soi dans une discussion tendue compte autant que d'avoir raison sur le fond." },
+    ],
+    refStrategie: "France Stratégie / DARES, famille P4Z : le 3e score combiné le plus élevé des 39 savoirs-agir (5,38), porté par contact avec le public +1,08 pt, travail en équipe +2,04 pt et charge émotionnelle +2,26 pt, tous au-dessus de la moyenne toutes familles.",
+    refRNE: "RNE Lieutenant et Capitaine SPP, bloc Santé Sécurité Qualité de Vie en Service (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : agir et réagir lors d'une agression physique ou psychologique. Correspondance moins directe et moins explicite que pour les autres savoirs-agir de ce bloc.",
+    exempleOral: "Pendant la construction du dossier de candidature au prix national, j'ai accepté qu'une partie que j'avais proposée soit retravaillée par un autre pilote, sans chercher à la défendre coûte que coûte.",
+  },
+  {
     key: "stress",
     titre: "Gérer son stress",
     definition: "Savoir travailler sous la pression, supporter et gérer le stress produit par l'urgence d'une situation ou les pressions venues de l'extérieur.",
@@ -796,14 +815,14 @@ function renderStart() {
         Ce questionnaire dawo t'aide à <strong>identifier</strong> les compétences que tu as mobilisées sans forcément t'en rendre compte, à te les <strong>révéler</strong>, pour ensuite les <strong>renforcer</strong> et les présenter à l'oral de ton concours officier (lieutenant / capitaine).
       </p>
       <div style="font-size:13px; line-height:1.55; color:#555;">
-        <div style="font-weight:700; color:var(--navy); margin-bottom:4px;">Pourquoi 9 savoirs-agir ?</div>
+        <div style="font-weight:700; color:var(--navy); margin-bottom:4px;">Pourquoi 10 savoirs-agir ?</div>
         <p style="margin:0 0 8px;">Le référentiel dawo compte 39 savoirs-agir répartis en trois axes.</p>
-        <p style="margin:0 0 8px;">Pour cette expérimentation avec le Groupe Jeunesse Beauvau, 9 ont été retenus. Ils correspondent au croisement de deux références professionnelles :</p>
+        <p style="margin:0 0 8px;">Pour cette expérimentation avec le Groupe Jeunesse Beauvau, 10 ont été retenus. Ils correspondent au croisement de deux références professionnelles :</p>
         <ul style="margin:0 0 8px; padding-left:18px;">
           <li>le Référentiel National d'Évaluation (RNE) des officiers sapeurs-pompiers ;</li>
           <li>les données France Stratégie / DARES relatives aux compétences mobilisées dans la famille de métiers « armée, police, pompiers ».</li>
         </ul>
-        <p style="margin:0 0 8px;">Ces 9 savoirs-agir ont donc été sélectionnés pour leur pertinence particulière au regard des situations vécues dans le projet et de l'environnement professionnel de la Sécurité civile.</p>
+        <p style="margin:0 0 8px;">Ces 10 savoirs-agir ont donc été sélectionnés pour leur pertinence particulière au regard des situations vécues dans le projet et de l'environnement professionnel de la Sécurité civile.</p>
         <p style="margin:0;">Ils ne constituent pas une réduction du référentiel dawo : ils en sont une sélection contextualisée pour cette expérimentation, élaborée à partir de la méthode dawo (référentiel dawoGrid).</p>
       </div>
       <p style="font-size:13px; line-height:1.5; color:#555;">Compte environ 15 à 20 minutes pour l'ensemble (72 questions courtes). Le temps est annoncé à l'avance pour que tu puisses t'organiser, pas pour te presser : ta progression est sauvegardée automatiquement si tu dois t'arrêter et reprendre plus tard.</p>
@@ -903,7 +922,7 @@ async function sendToSheet(r) {
     prenom: r.prenom,
     date: new Date(r.date).toLocaleDateString("fr-FR"),
   };
-  ["convaincre", "coordonner", "organiser", "responsabilites", "complexite", "ecrire", "integration", "creativite", "stress"].forEach(k => {
+  ["convaincre", "coordonner", "organiser", "responsabilites", "complexite", "ecrire", "integration", "creativite", "stress", "controle"].forEach(k => {
     payload[k] = byKey[k] && byKey[k].maitrise !== null ? Number(byKey[k].maitrise.toFixed(1)) : "";
   });
   try {
@@ -941,7 +960,7 @@ async function finishQuiz() {
   render();
 }
 
-const TABLE_ORDER = ["convaincre", "coordonner", "organiser", "responsabilites", "complexite", "ecrire", "integration", "creativite", "stress"];
+const TABLE_ORDER = ["convaincre", "coordonner", "organiser", "responsabilites", "complexite", "ecrire", "integration", "creativite", "stress", "controle"];
 const TABLE_LABELS = {
   convaincre: "Convaincre",
   coordonner: "Coordonner",
@@ -952,6 +971,7 @@ const TABLE_LABELS = {
   integration: "Travail en équipe",
   creativite: "Empathie",
   stress: "Gestion du stress",
+  controle: "Maîtrise de soi",
 };
 
 function scoreFR(v) {
@@ -989,12 +1009,12 @@ function buildReportText(r) {
   lines.push("");
   lines.push("Ce rapport suit la démarche dawo : identifier les compétences mobilisées dans l'action, les révéler (les rendre conscientes et formulables), puis les renforcer en vue de l'oral officier.");
   lines.push("");
-  lines.push("Pourquoi 9 savoirs-agir ?");
-  lines.push("Le référentiel dawo compte 39 savoirs-agir répartis en trois axes. Pour cette expérimentation avec le Groupe Jeunesse Beauvau, 9 ont été retenus, au croisement du Référentiel National d'Évaluation (RNE) des officiers sapeurs-pompiers et des données France Stratégie / DARES relatives à la famille de métiers armée, police, pompiers. Ils ne constituent pas une réduction du référentiel dawo : ils en sont une sélection contextualisée pour cette expérimentation, élaborée à partir de la méthode dawo (référentiel dawoGrid).");
+  lines.push("Pourquoi 10 savoirs-agir ?");
+  lines.push("Le référentiel dawo compte 39 savoirs-agir répartis en trois axes. Pour cette expérimentation avec le Groupe Jeunesse Beauvau, 10 ont été retenus, au croisement du Référentiel National d'Évaluation (RNE) des officiers sapeurs-pompiers et des données France Stratégie / DARES relatives à la famille de métiers armée, police, pompiers. Ils ne constituent pas une réduction du référentiel dawo : ils en sont une sélection contextualisée pour cette expérimentation, élaborée à partir de la méthode dawo (référentiel dawoGrid).");
   lines.push("");
   lines.push("Pour chaque savoir-agir, deux repères s'ajoutent à tes scores. Le repère métier est un chiffre national (source France Stratégie / DARES) qui montre que ce savoir-agir est particulièrement sollicité pour la famille de métiers armée, police, pompiers, tous grades confondus. Le référentiel du grade, lui, est spécifique aux officiers : c'est un extrait du texte officiel qui évalue les officiers (RNE), qui montre que ce savoir-agir est explicitement attendu pour les officiers sapeurs-pompiers. Ce ne sont pas des jugements sur toi : ce sont des preuves externes à citer à l'oral.");
   lines.push("");
-  lines.push("Comment le lien a été construit : pour chaque situation de travail mesurée par la DARES (encadrement, travail en équipe, contact avec le public...), un tableau croisé indique quels savoirs-agir dawo elle mobilise. La DARES donne ensuite un score propre à la famille armée/police/pompiers, comparé à la moyenne toutes familles. Un écart positif signifie que la situation revient plus souvent dans ce métier que dans les autres. C'est le cas pour 8 des 9 savoirs-agir retenus ici ; le neuvième (appréhender la complexité) tient sur un écart réel mais faible.");
+  lines.push("Comment le lien a été construit : pour chaque situation de travail mesurée par la DARES (encadrement, travail en équipe, contact avec le public...), un tableau croisé indique quels savoirs-agir dawo elle mobilise. La DARES donne ensuite un score propre à la famille armée/police/pompiers, comparé à la moyenne toutes familles. Un écart positif signifie que la situation revient plus souvent dans ce métier que dans les autres. C'est le cas pour 9 des 10 savoirs-agir retenus ici ; un seul (appréhender la complexité) tient sur un écart réel mais faible.");
   lines.push("");
   r.results
     .slice()
@@ -1090,9 +1110,9 @@ function buildReportHTML(r) {
   <h1>Résultats : ${r.prenom}</h1>
   <div class="sub">Beauvau Sécurité Civile, Groupe Jeunesse, rapport du projet J'IMPACT ma Sécurité Civile (hackathon et fresque). Identifier, révéler, renforcer.</div>
   <div class="card">
-    <div style="font-weight:700; color:var(--navy); margin-bottom:4px;">Pourquoi 9 savoirs-agir ?</div>
+    <div style="font-weight:700; color:var(--navy); margin-bottom:4px;">Pourquoi 10 savoirs-agir ?</div>
     <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Le référentiel dawo compte 39 savoirs-agir répartis en trois axes.</p>
-    <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Pour cette expérimentation avec le Groupe Jeunesse Beauvau, 9 ont été retenus. Ils correspondent au croisement de deux références professionnelles :</p>
+    <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Pour cette expérimentation avec le Groupe Jeunesse Beauvau, 10 ont été retenus. Ils correspondent au croisement de deux références professionnelles :</p>
     <ul style="font-size:13px; margin:0 0 8px; padding-left:18px;">
       <li>le Référentiel National d'Évaluation (RNE) des officiers sapeurs-pompiers ;</li>
       <li>les données France Stratégie / DARES relatives aux compétences mobilisées dans la famille de métiers « armée, police, pompiers ».</li>
@@ -1104,11 +1124,11 @@ function buildReportHTML(r) {
     <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:8px;">Comment le lien a été construit</div>
     <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Pour chaque situation de travail mesurée par l'enquête Conditions de travail de la DARES (encadrement, travail en équipe, contact avec le public, charge émotionnelle...), un tableau croisé indique quels savoirs-agir du référentiel dawo cette situation mobilise. Une situation peut en mobiliser plusieurs à la fois : encadrer une équipe, par exemple, sollicite en même temps la coordination, l'organisation et la capacité à convaincre.</p>
     <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">La DARES fournit ensuite, pour chaque situation, un score moyen propre à la famille professionnelle P4Z (armée, police, pompiers), comparé à la moyenne toutes familles confondues. Un écart positif signifie que cette situation revient plus souvent dans ce métier que dans l'ensemble des métiers étudiés par l'enquête.</p>
-    <p style="font-size:13px; line-height:1.55; margin:0;">En croisant les deux, chaque savoir-agir répond à une question précise : apparaît-il dans une situation que ce métier rencontre plus souvent que la moyenne ? C'est le cas pour 8 des 9 retenus ici. Le neuvième (appréhender la complexité) tient sur un écart réel mais faible : on te le dit plutôt que de le maquiller en argument fort.</p>
+    <p style="font-size:13px; line-height:1.55; margin:0;">En croisant les deux, chaque savoir-agir répond à une question précise : apparaît-il dans une situation que ce métier rencontre plus souvent que la moyenne ? C'est le cas pour 9 des 10 retenus ici. Un seul (appréhender la complexité) tient sur un écart réel mais faible : on te le dit plutôt que de le maquiller en argument fort.</p>
   </div>
   <div class="card">
     <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:8px;">Comment dawo construit ton profil</div>
-    <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Pour chacun des 9 savoirs-agir, dawo croise quatre dimensions :</p>
+    <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Pour chacun des 10 savoirs-agir, dawo croise quatre dimensions :</p>
     <p style="font-size:13px; line-height:1.5; margin:0 0 6px;"><strong>Dans l'action</strong> : ce que ton expérience du projet permet d'identifier à travers les situations et comportements que tu as vécus.</p>
     <p style="font-size:13px; line-height:1.5; margin:0 0 6px;"><strong>La perception</strong> : la manière dont tu penses être perçu par les autres dans ce savoir-agir.</p>
     <p style="font-size:13px; line-height:1.5; margin:0 0 6px;"><strong>Le regard des autres</strong> : les situations dans lesquelles d'autres participants t'ont sollicité, identifié ou reconnu pour ce savoir-agir.</p>
@@ -1240,11 +1260,11 @@ function renderResult() {
       <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:8px;">Comment le lien a été construit</div>
       <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Pour chaque situation de travail mesurée par l'enquête Conditions de travail de la DARES (encadrement, travail en équipe, contact avec le public, charge émotionnelle...), un tableau croisé indique quels savoirs-agir du référentiel dawo cette situation mobilise. Une situation peut en mobiliser plusieurs à la fois : encadrer une équipe, par exemple, sollicite en même temps la coordination, l'organisation et la capacité à convaincre.</p>
       <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">La DARES fournit ensuite, pour chaque situation, un score moyen propre à la famille professionnelle P4Z (armée, police, pompiers), comparé à la moyenne toutes familles confondues. Un écart positif signifie que cette situation revient plus souvent dans ce métier que dans l'ensemble des métiers étudiés par l'enquête.</p>
-      <p style="font-size:13px; line-height:1.55; margin:0;">En croisant les deux, chaque savoir-agir répond à une question précise : apparaît-il dans une situation que ce métier rencontre plus souvent que la moyenne ? C'est le cas pour 8 des 9 retenus ici. Le neuvième (appréhender la complexité) tient sur un écart réel mais faible : on te le dit plutôt que de le maquiller en argument fort.</p>
+      <p style="font-size:13px; line-height:1.55; margin:0;">En croisant les deux, chaque savoir-agir répond à une question précise : apparaît-il dans une situation que ce métier rencontre plus souvent que la moyenne ? C'est le cas pour 9 des 10 retenus ici. Un seul (appréhender la complexité) tient sur un écart réel mais faible : on te le dit plutôt que de le maquiller en argument fort.</p>
     </div>
     <div class="card" style="margin-bottom:12px;">
       <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:8px;">Comment dawo construit ton profil</div>
-      <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Pour chacun des 9 savoirs-agir, dawo croise quatre dimensions :</p>
+      <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Pour chacun des 10 savoirs-agir, dawo croise quatre dimensions :</p>
       <p style="font-size:13px; line-height:1.5; margin:0 0 6px;"><strong>Dans l'action</strong> : ce que ton expérience du projet permet d'identifier à travers les situations et comportements que tu as vécus.</p>
       <p style="font-size:13px; line-height:1.5; margin:0 0 6px;"><strong>La perception</strong> : la manière dont tu penses être perçu par les autres dans ce savoir-agir.</p>
       <p style="font-size:13px; line-height:1.5; margin:0 0 6px;"><strong>Le regard des autres</strong> : les situations dans lesquelles d'autres participants t'ont sollicité, identifié ou reconnu pour ce savoir-agir.</p>
