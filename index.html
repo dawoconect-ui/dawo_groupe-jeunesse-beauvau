@@ -240,7 +240,7 @@ const appStorage = {
 };
 
 // ---------------------------------------------------------------------
-// Données : 8 compétences x 4 angles. La clé de compétence n'est JAMAIS
+// Données : 10 compétences x 4 angles x 2 questions = 80 items. La clé de compétence n'est JAMAIS
 // affichée pendant la passation, uniquement dans les résultats finaux.
 // ---------------------------------------------------------------------
 const COMPETENCES = [
@@ -293,7 +293,7 @@ const COMPETENCES = [
       { angle: "autres", text: "On m'a confié une tâche arrivée tard dans le calendrier en sachant que je la caserais sans décaler le reste." },
       { angle: "importance", text: "Sans un ordre clair des tâches à traiter, un calendrier fixé par une lettre de mission externe devient vite intenable." },
       { angle: "action", text: "J'ai dû changer le programme du hackathon en cours de route parce qu'il ne correspondait plus à l'avancée réelle des équipes." },
-      { angle: "perception", text: "On savait que si je disais qu'une tâche serait prête à une date donnée, elle le serait." },
+      { angle: "perception", text: "Les autres pilotes me percevaient comme quelqu'un qui tenait les échéances qu'il annonçait." },
       { angle: "autres", text: "Une équipe du hackathon a adapté son propre rythme de travail après que je lui ai communiqué un nouvel ordre de passage." },
       { angle: "importance", text: "Le séquençage d'un évènement sur plusieurs jours ne tolère pas d'improviser l'ordre des activités au dernier moment." },
     ],
@@ -326,7 +326,7 @@ const COMPETENCES = [
     definition: "Savoir prendre en considération un objet ou une situation dans toutes ses dimensions, avoir la capacité de faire des liens entre tous les domaines dont elle relève, et de gérer le volume d'informations existant.",
     illustration: "J'ai une approche multidimensionnelle.",
     items: [
-      { angle: "action", text: "J'ai suivi en parallèle plusieurs tâches (recrutement des mentors, recrutement des équipes, actions de communication) sans perdre le fil de l'une d'elles." },
+      { angle: "action", text: "Pour prendre une décision, j'ai dû mettre en relation plusieurs informations ou contraintes qui ne relevaient pas du même sujet." },
       { angle: "perception", text: "D'autres pilotes venaient me voir quand une proposition retenue sur leur axe risquait d'en contredire une autre sur un axe différent." },
       { angle: "autres", text: "On m'a sollicité en urgence pendant l'évènement pour trouver une solution à un problème qui n'était pas prévu au programme." },
       { angle: "importance", text: "Avec 12 groupes et 7 axes qui se croisent, traiter chaque sujet isolément aboutit vite à des propositions qui se contredisent entre elles." },
@@ -350,7 +350,7 @@ const COMPETENCES = [
       { angle: "autres", text: "Une partie du rapport présenté au directeur général reprenait presque telle quelle une formulation que j'avais proposée pour résumer une mesure clé." },
       { angle: "importance", text: "Une bonne idée mal formulée dans un document peut disparaître pour quelqu'un qui la découvre sans le contexte oral qui l'accompagne." },
       { angle: "action", text: "J'ai contribué à la construction d'un dossier de candidature à un prix national, amendé et corrigé à plusieurs mains avant d'être déposé dans les délais." },
-      { angle: "perception", text: "Les autres pilotes savaient qu'ils pouvaient me confier une partie sensible du document sans avoir à la retravailler après moi." },
+      { angle: "perception", text: "Les autres pilotes me confiaient des parties de documents qui demandaient une formulation précise ou délicate." },
       { angle: "autres", text: "Un membre d'un autre groupe a repris ma façon de présenter un point pour clarifier sa propre partie." },
       { angle: "importance", text: "Ce qui n'apparaît pas clairement dans un document n'existe pas pour quelqu'un qui n'était pas dans la pièce." },
     ],
@@ -369,7 +369,7 @@ const COMPETENCES = [
       { angle: "autres", text: "Malgré la distance et le fait de ne pas se connaître au départ, un membre de mon groupe s'est appuyé sur une proposition que j'avais partagée en visio pour construire la sienne." },
       { angle: "importance", text: "La réussite du hackathon ne dépendait pas d'une seule personne, mais de la capacité de chacun à s'appuyer sur les autres." },
       { angle: "action", text: "Le dossier de candidature à un prix national a été construit à plusieurs mains, chacun apportant sa partie, plutôt que rédigé seul dans son coin." },
-      { angle: "perception", text: "On me considérait comme quelqu'un qui privilégiait l'avancée du groupe plutôt que la mise en avant de sa propre contribution." },
+      { angle: "perception", text: "Dans les décisions collectives, je cherchais à faire avancer le groupe même quand cela signifiait revoir ma propre contribution." },
       { angle: "autres", text: "Les pilotes d'un autre groupe ont demandé à s'inspirer de notre façon de travailler ensemble." },
       { angle: "importance", text: "Un dossier construit à plusieurs mains vaut mieux qu'un dossier parfait rédigé seul." },
     ],
@@ -404,7 +404,7 @@ const COMPETENCES = [
     items: [
       { angle: "action", text: "Pendant la construction du dossier de candidature, j'ai accepté qu'une partie que j'avais proposée soit retravaillée par un autre pilote, sans chercher à la défendre coûte que coûte." },
       { angle: "perception", text: "Les autres pilotes savaient qu'ils pouvaient me contredire sans que je le prenne mal." },
-      { angle: "autres", text: "Un pilote a modifié son propre avis après un échange avec moi, sans que je l'aie poussé à le faire." },
+      { angle: "autres", text: "Lors d'un désaccord, un autre pilote a continué à échanger avec moi sans que la discussion ne tourne au conflit personnel." },
       { angle: "importance", text: "Une bonne idée qui ne survit pas à la discussion collective n'est pas forcément une mauvaise idée." },
       { angle: "action", text: "Face à un désaccord avec un autre pilote sur une proposition, j'ai pris le temps de comprendre son point de vue avant de maintenir ou de revoir le mien." },
       { angle: "perception", text: "On me considérait comme quelqu'un qui restait posé même quand une discussion tournait au désaccord." },
@@ -426,7 +426,7 @@ const COMPETENCES = [
       { angle: "autres", text: "Un mentor ou un pilote m'a confié une tâche sensible juste avant une échéance importante, en sachant que je ne la traiterais pas dans la précipitation." },
       { angle: "importance", text: "Un document engagé par une instance comme un ministère laisse peu de place à l'improvisation de dernière minute quand la pression monte." },
       { angle: "action", text: "Face à un aléa technique en plein hackathon, j'ai continué à accompagner mon équipe sans que ma réaction ne se voie dans mon ton." },
-      { angle: "perception", text: "On disait de moi que je gardais la tête froide quand la pression montait." },
+      { angle: "perception", text: "Je me percevais comme suffisamment disponible pour écouter et décider quand la pression montait." },
       { angle: "autres", text: "Un pilote est venu me voir spécifiquement parce qu'il savait que je ne paniquerais pas face à un problème urgent." },
       { angle: "importance", text: "Céder à la pression au mauvais moment peut faire perdre plus de temps que le problème initial." },
     ],
@@ -646,7 +646,7 @@ function buildSynthesis(r) {
   const withData = r.results.filter(c => c.maitrise !== null && c.importance !== null);
 
   const APPUI_THRESHOLD = 3.5; // moyenne (maîtrise + importance)/2 minimale pour compter comme point d'appui
-  const GAP_THRESHOLD = 0.75;  // écart minimal pour ne pas confondre signal et bruit de mesure (item unique par dimension)
+  const GAP_THRESHOLD = 0.75;  // seuil conventionnel retenu pour cette expérimentation, pas un seuil scientifiquement établi (2 items par dimension)
 
   const appui = withData
     .filter(c => (c.maitrise + c.importance) / 2 >= APPUI_THRESHOLD)
@@ -724,7 +724,15 @@ function buildDimensionReading(c) {
   return `<p style="font-size:12px; color:#555; font-style:italic; margin:4px 0 0;">Tu te perçois toi-même plus fort sur ce savoir-agir que ce que l'action et la reconnaissance du collectif ne le montrent dans cette expérience précise. Ça peut venir d'une confiance déjà installée, ou d'un savoir-agir peu sollicité par ce projet en particulier.</p>`;
 }
 
-function scoreLabel(gap) {
+function scoreLabel(gap, maitrise) {
+  const LOW_THRESHOLD = 2.5;
+  if (gap <= 0.7 && maitrise !== null && maitrise !== undefined && maitrise < LOW_THRESHOLD) {
+    return {
+      text: "Peu mobilisé dans cette expérience",
+      cls: "situational",
+      explain: "Ce savoir-agir n'a pas été particulièrement mobilisé dans ce projet précis. Ça ne dit rien de ta capacité générale, seulement de cette expérience-là.",
+    };
+  }
   if (gap <= 0.7) return {
     text: "Compétence identifiée",
     cls: "strong",
@@ -745,9 +753,10 @@ function scoreLabel(gap) {
 function buildStatusLegend() {
   return `
     <div style="font-size:13px; line-height:1.6;">
-      <div style="margin-bottom:6px;"><span class="badge strong">Compétence identifiée</span> : maîtrise et importance sont alignées. Le savoir-agir est clairement identifié dans l'expérience vécue.</div>
+      <div style="margin-bottom:6px;"><span class="badge strong">Compétence identifiée</span> : maîtrise et importance sont alignées, et toutes deux nettement présentes. Le savoir-agir est clairement identifié dans l'expérience vécue.</div>
       <div style="margin-bottom:6px;"><span class="badge medium">Compétence à faire émerger</span> : le savoir-agir apparaît dans l'expérience mais mérite d'être davantage conscientisé ou explicité.</div>
-      <div><span class="badge situational">Savoir-agir contextualisé</span> : le savoir-agir apparaît dans les situations vécues du projet, mais il est trop tôt pour conclure à sa transférabilité dans d'autres contextes.</div>
+      <div style="margin-bottom:6px;"><span class="badge situational">Savoir-agir contextualisé</span> : le savoir-agir apparaît dans les situations vécues du projet, mais il est trop tôt pour conclure à sa transférabilité dans d'autres contextes.</div>
+      <div><span class="badge situational">Peu mobilisé dans cette expérience</span> : maîtrise et importance sont alignées, mais toutes deux faibles. Ce savoir-agir n'a pas particulièrement marqué ce projet précis, ce qui ne dit rien de ta capacité générale.</div>
     </div>
   `;
 }
@@ -766,6 +775,10 @@ let state = {
 };
 
 const app = document.getElementById("app");
+
+function normalizePrenom(s) {
+  return (s || "").trim().toLowerCase();
+}
 
 function computeResults(pool, answers) {
   const byComp = {};
@@ -823,17 +836,17 @@ function renderStart() {
         <p style="margin:0 0 8px;">Ces 10 savoirs-agir ont donc été sélectionnés pour leur pertinence particulière au regard des situations vécues dans le projet et de l'environnement professionnel de la Sécurité civile.</p>
         <p style="margin:0;">Ils ne constituent pas une réduction du référentiel dawo : ils en sont une sélection contextualisée pour cette expérimentation, élaborée à partir de la méthode dawo (référentiel dawoGrid).</p>
       </div>
-      <p style="font-size:13px; line-height:1.5; color:#555;">Compte environ 15 à 20 minutes pour l'ensemble (72 questions courtes). Le temps est annoncé à l'avance pour que tu puisses t'organiser, pas pour te presser : ta progression est sauvegardée automatiquement si tu dois t'arrêter et reprendre plus tard.</p>
+      <p style="font-size:13px; line-height:1.5; color:#555;">Compte environ 18 à 22 minutes pour l'ensemble (80 questions courtes). Le temps est annoncé à l'avance pour que tu puisses t'organiser, pas pour te presser : ta progression est sauvegardée automatiquement si tu dois t'arrêter et reprendre plus tard.</p>
       <p style="font-size:13px; line-height:1.5; color:#555;">Réponds spontanément, sans chercher à deviner ce qui est mesuré : les questions sont volontairement formulées pour ne pas révéler la compétence évaluée. Il n'y a pas de bonne ou de mauvaise réponse, et personne ne compare les résultats entre pilotes.</p>
       <label style="font-size:13px; font-weight:600;">Prénom</label>
       <input type="text" id="prenom-input" placeholder="Ton prénom" />
       <label style="font-size:13px; display:flex; align-items:flex-start; gap:8px; margin-top:4px; margin-bottom:16px; font-weight:400;">
         <input type="checkbox" id="consent-checkbox" checked style="margin-top:3px;" />
-        <span>J'accepte que mes réponses soient enregistrées pour que je puisse retrouver mon rapport plus tard. Si je décoche, mes réponses ne seront pas conservées après cette session : je devrai télécharger mon rapport immédiatement à la fin.</span>
+        <span>J'accepte que mes réponses soient enregistrées sur cet appareil (pour retrouver mon rapport plus tard) et qu'un résumé de mes scores par savoir-agir soit transmis à l'organisatrice du projet dans un tableau partagé. Le détail de mes réponses reste sur mon appareil, seul le résumé chiffré, associé à mon prénom, est transmis. Si je décoche, rien n'est conservé ni transmis : je devrai télécharger mon rapport immédiatement à la fin.</span>
       </label>
       <button id="start-btn">Commencer</button>
     </div>
-    <div class="footer-note">Outil confidentiel, usage interne au projet dawo / Beauvau Sécurité Civile Groupe Jeunesse. Tes réponses ne sont accessibles qu'à toi. La correspondance entre les questions et les compétences n'est jamais affichée pendant la passation.</div>
+    <div class="footer-note">Outil confidentiel, usage interne au projet dawo / Beauvau Sécurité Civile Groupe Jeunesse. Le détail de tes réponses reste sur ton appareil ; si tu donnes ton accord, un résumé de tes scores par savoir-agir est transmis à l'organisatrice dans un tableau partagé. La correspondance entre les questions et les compétences n'est jamais affichée pendant la passation.</div>
   `;
   document.getElementById("start-btn").onclick = async () => {
     const val = document.getElementById("prenom-input").value.trim();
@@ -843,7 +856,7 @@ function renderStart() {
     let resumed = false;
     if (state.consent) {
       try {
-        const saved = await appStorage.get("progression:" + val);
+        const saved = await appStorage.get("progression:" + normalizePrenom(val));
         if (saved && saved.value) {
           const data = JSON.parse(saved.value);
           if (data.currentIndex < data.pool.length) {
@@ -868,11 +881,19 @@ function renderStart() {
   };
 }
 
+const SCALE_LABELS = {
+  action: { min: "Pas du tout vrai de mon expérience", max: "Tout à fait vrai de mon expérience" },
+  perception: { min: "Pas du tout vrai de mon expérience", max: "Tout à fait vrai de mon expérience" },
+  autres: { min: "Pas du tout vrai de mon expérience", max: "Tout à fait vrai de mon expérience" },
+  importance: { min: "Pas du tout important", max: "Essentiel" },
+};
+
 function renderQuiz() {
   const item = state.pool[state.currentIndex];
   const pct = Math.round((state.currentIndex / state.pool.length) * 100);
   const half = Math.floor(state.pool.length / 2);
   const halfNote = state.currentIndex === half ? `<div class="warn" style="margin-top:0;">Tu es à la moitié. Tu peux t'arrêter et reprendre plus tard si besoin : ta progression est sauvegardée automatiquement.</div>` : "";
+  const labels = SCALE_LABELS[item.angle] || SCALE_LABELS.action;
   app.innerHTML = `
     <h1>Auto-évaluation dawo</h1>
     <div class="progress-label">${state.currentIndex + 1} / ${state.pool.length}</div>
@@ -883,7 +904,7 @@ function renderQuiz() {
       <div class="scale">
         ${[1,2,3,4,5].map(n => `<button data-n="${n}">${n}</button>`).join("")}
       </div>
-      <div class="scale-labels"><span>Jamais / pas du tout</span><span>Systématiquement / tout à fait</span></div>
+      <div class="scale-labels"><span>${labels.min}</span><span>${labels.max}</span></div>
     </div>
   `;
   document.querySelectorAll(".scale button").forEach(btn => {
@@ -891,7 +912,7 @@ function renderQuiz() {
       state.answers[item.id] = parseInt(btn.dataset.n, 10);
       if (state.consent) {
         try {
-          await appStorage.set("progression:" + state.prenom, JSON.stringify({
+          await appStorage.set("progression:" + normalizePrenom(state.prenom), JSON.stringify({
             pool: state.pool, currentIndex: state.currentIndex + 1, answers: state.answers,
           }), false);
         } catch (e) { /* pas grave si la sauvegarde intermédiaire échoue */ }
@@ -907,6 +928,10 @@ function renderQuiz() {
 }
 
 const SHEET_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbyAHfPpYp5IonimFyN7Ubw9wPk3UVYIaMAXCRvmKGQ9Heqn6-KvUiTi9GhGyRjfFuIaVw/exec";
+// Ce "secret" est un simple filtre technique contre les envois accidentels ou aléatoires
+// vers la feuille (il est visible en clair dans ce fichier). Ce n'est pas une vraie sécurité :
+// n'importe qui inspectant le code source de la page peut le lire. Suffisant pour cette
+// expérimentation à effectif restreint, pas pour protéger des données sensibles à grande échelle.
 const SHEET_SHARED_SECRET = "beauvau-dawo-2025";
 
 async function sendToSheet(r) {
@@ -949,7 +974,7 @@ async function finishQuiz() {
       await appStorage.set("resultat:" + state.prenom + "_" + Date.now(), JSON.stringify(record));
     } catch (e) { console.error("Erreur de sauvegarde", e); }
     try {
-      await appStorage.delete("progression:" + state.prenom);
+      await appStorage.delete("progression:" + normalizePrenom(state.prenom));
     } catch (e) { /* rien à nettoyer */ }
     record.sheetResult = await sendToSheet(record);
   }
@@ -1018,7 +1043,7 @@ function buildReportText(r) {
     .slice()
     .sort((a, b) => (b.maitrise || 0) - (a.maitrise || 0))
     .forEach(c => {
-      const gapInfo = c.gap !== null ? scoreLabel(c.gap) : { text: "incomplet", cls: "", explain: "Réponses insuffisantes pour conclure." };
+      const gapInfo = c.gap !== null ? scoreLabel(c.gap, c.maitrise) : { text: "incomplet", cls: "", explain: "Réponses insuffisantes pour conclure." };
       const fmt = v => (v !== null && v !== undefined ? v.toFixed(1) : "n.d.");
       lines.push(c.titre.toUpperCase());
       lines.push(`Définition : ${c.definition}`);
@@ -1038,7 +1063,7 @@ function buildReportText(r) {
   lines.push("Une seconde lecture complémentaire existe : le regard des animateurs sur l'ensemble de l'aventure du Groupe Jeunesse (9 situations vécues, cartographie des 39 savoirs-agir du référentiel dawo). Elle est disponible dans l'application et dans le rapport téléchargeable, pas dans cette version envoyée par mail.");
   lines.push("");
   lines.push("Sources : dawo, référentiel dawoGrid (39 savoirs-agir). France Stratégie, « Situations de travail, compétences transversales et mobilité entre les métiers » et son annexe méthodologique (2021), d'après l'enquête Conditions de travail de la DARES, famille P4Z.");
-  lines.push("Référentiel National d'Évaluation des emplois tenus par les lieutenants de 1re classe SPP, DGSCGC/DSP/SDDRH/BDFE, version du 30/04/2020.");
+  lines.push("Référentiels Nationaux d'Évaluation des emplois tenus par les lieutenants de 1re classe et par les capitaines SPP, DGSCGC/DSP/SDDRH/BDFE, version du 30/04/2020 (texte des compétences transversales identique dans les deux documents).");
   lines.push("");
   lines.push("Document confidentiel, usage interne au projet dawo / Beauvau Sécurité Civile Groupe Jeunesse.");
   lines.push("");
@@ -1054,7 +1079,7 @@ function buildReportHTML(r) {
     .slice()
     .sort((a, b) => (b.maitrise || 0) - (a.maitrise || 0))
     .map(c => {
-      const gapInfo = c.gap !== null ? scoreLabel(c.gap) : { text: "incomplet", cls: "medium", explain: "Réponses insuffisantes pour conclure." };
+      const gapInfo = c.gap !== null ? scoreLabel(c.gap, c.maitrise) : { text: "incomplet", cls: "medium", explain: "Réponses insuffisantes pour conclure." };
       return `
         <div class="comp-block">
           <div class="comp-title">${c.titre}</div>
@@ -1155,7 +1180,7 @@ function buildReportHTML(r) {
   ${buildRegardAnimateurs()}
   <div class="footer-note">
     Sources : dawo, référentiel dawoGrid (39 savoirs-agir). France Stratégie, « Situations de travail, compétences transversales et mobilité entre les métiers » et son annexe méthodologique (2021), d'après l'enquête Conditions de travail de la DARES, famille P4Z.<br/>
-    Référentiel National d'Évaluation des emplois tenus par les lieutenants de 1re classe SPP, DGSCGC/DSP/SDDRH/BDFE, version du 30/04/2020.<br/>
+    Référentiels Nationaux d'Évaluation des emplois tenus par les lieutenants de 1re classe et par les capitaines SPP, DGSCGC/DSP/SDDRH/BDFE, version du 30/04/2020 (texte des compétences transversales identique dans les deux documents).<br/>
     Document confidentiel, usage interne au projet dawo / Beauvau Sécurité Civile Groupe Jeunesse. Date : ${new Date(r.date).toLocaleString("fr-FR")}.
   </div>
 </div>
@@ -1303,9 +1328,9 @@ function renderResult() {
       <button class="secondary" id="home-btn">Accueil</button>
     </div>
     <div class="footer-note">
-      Ce rapport n'est visible que par toi. L'envoi par mail est volontaire : rien n'est transmis sans que tu cliques sur le bouton.<br/>
+      Le détail de tes réponses et ce rapport complet restent sur ton appareil. Si tu as donné ton accord, seul un résumé de tes scores par savoir-agir a été transmis à l'organisatrice. L'envoi de ce rapport par mail est volontaire : rien n'est transmis sans que tu cliques sur le bouton.<br/>
       Sources : dawo, référentiel dawoGrid (39 savoirs-agir). France Stratégie, « Situations de travail, compétences transversales et mobilité entre les métiers » et son annexe méthodologique (2021), d'après l'enquête Conditions de travail de la DARES, famille P4Z.
-      Référentiel National d'Évaluation des emplois tenus par les lieutenants de 1re classe SPP, DGSCGC/DSP/SDDRH/BDFE, version du 30/04/2020.
+      Référentiels Nationaux d'Évaluation des emplois tenus par les lieutenants de 1re classe et par les capitaines SPP, DGSCGC/DSP/SDDRH/BDFE, version du 30/04/2020 (texte des compétences transversales identique dans les deux documents).
     </div>
   `;
   const card = document.getElementById("results-card");
@@ -1313,7 +1338,7 @@ function renderResult() {
     .slice()
     .sort((a, b) => (b.maitrise || 0) - (a.maitrise || 0))
     .forEach(c => {
-      const gapInfo = c.gap !== null ? scoreLabel(c.gap) : { text: "incomplet", cls: "medium", explain: "Réponses insuffisantes pour conclure." };
+      const gapInfo = c.gap !== null ? scoreLabel(c.gap, c.maitrise) : { text: "incomplet", cls: "medium", explain: "Réponses insuffisantes pour conclure." };
       const block = document.createElement("div");
       block.className = "comp-block";
       block.innerHTML = `
