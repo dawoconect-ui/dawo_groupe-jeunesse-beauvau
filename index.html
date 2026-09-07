@@ -137,6 +137,7 @@
   .badge.strong { background: #d9f0d9; color: #1f6b1f; }
   .badge.medium { background: #fdf0d5; color: #8a6100; }
   .badge.situational { background: #f4dede; color: #a12b2b; }
+  .badge.neutral { background: #e6e6e6; color: #555; }
   .ref {
     font-size: 12px;
     color: #555;
@@ -354,7 +355,7 @@ const COMPETENCES = [
       { angle: "autres", text: "Le chargé de mission a repris une formulation que j'avais notée sur un post-it du tableau de bord virtuel pour finaliser une proposition." },
       { angle: "importance", text: "J'ai préparé un support sur les attentes et le planning pour les mentors non disponibles lors des échanges, en anticipant les questions qu'ils ne pourraient pas nous poser en direct." },
     ],
-    refStrategie: "France Stratégie / DARES, famille P4Z : contact avec le public +1,08 pt et lecture/rédaction de documents +0,83 pt, les deux au-dessus de la moyenne toutes familles.",
+    refStrategie: "France Stratégie / DARES, famille P4Z : contact avec le public +1,08 pt au-dessus de la moyenne toutes familles.",
     refRNE: "RNE Lieutenant et Capitaine SPP (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : comprendre et rédiger des écrits.",
     exempleOral: "J'ai contribué à la rédaction ou à la reformulation d'un contenu écrit, proposition ou support de communication, qui a ensuite été repris par d'autres, sans que le sens initial de mon groupe ne soit perdu.",
   },
@@ -431,7 +432,7 @@ const COMPETENCES = [
       { angle: "importance", text: "Lorsqu'un mentor qui avait donné son accord n'a plus été disponible au dernier moment, j'ai pris le temps de chercher la solution la plus adaptée avant de décider comment réorganiser la suite." },
     ],
     refStrategie: "France Stratégie / DARES, famille P4Z : charge émotionnelle +2,26 pt au-dessus de la moyenne toutes familles, l'écart le plus marqué de cette famille de métiers.",
-    refRNE: "RNE Lieutenant et Capitaine SPP, bloc Santé Sécurité Qualité de Vie en Service (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : adapter et entretenir son potentiel psychologique, agir et réagir lors d'une agression psychologique.",
+    refRNE: "RNE Lieutenant et Capitaine SPP, bloc Santé Sécurité Qualité de Vie en Service (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : adapter et entretenir son potentiel physiologique, physique, psychologique et social, agir et réagir lors d'une agression psychologique.",
     exempleOral: "Face à une échéance fixée par une instance extérieure au groupe, comme la lettre de mission du directeur général, j'ai continué à avancer sur les autres tâches en cours sans que cette pression ne prenne toute la place, y compris quand un imprévu est venu s'ajouter le jour de l'évènement.",
   },
 ];
@@ -729,7 +730,7 @@ function scoreLabel(gap, maitrise) {
   if (gap <= 0.7 && maitrise !== null && maitrise !== undefined && maitrise < LOW_THRESHOLD) {
     return {
       text: "Peu mobilisé dans cette expérience",
-      cls: "situational",
+      cls: "neutral",
       explain: "Ce savoir-agir n'a pas été particulièrement mobilisé dans ce projet précis. Ça ne dit rien de ta capacité générale, seulement de cette expérience-là.",
     };
   }
@@ -756,7 +757,7 @@ function buildStatusLegend() {
       <div style="margin-bottom:6px;"><span class="badge strong">Compétence identifiée</span> : maîtrise et importance sont alignées, et toutes deux nettement présentes. Le savoir-agir est clairement identifié dans l'expérience vécue.</div>
       <div style="margin-bottom:6px;"><span class="badge medium">Compétence à faire émerger</span> : le savoir-agir apparaît dans l'expérience mais mérite d'être davantage conscientisé ou explicité.</div>
       <div style="margin-bottom:6px;"><span class="badge situational">Savoir-agir contextualisé</span> : le savoir-agir apparaît dans les situations vécues du projet, mais il est trop tôt pour conclure à sa transférabilité dans d'autres contextes.</div>
-      <div><span class="badge situational">Peu mobilisé dans cette expérience</span> : maîtrise et importance sont alignées, mais toutes deux faibles. Ce savoir-agir n'a pas particulièrement marqué ce projet précis, ce qui ne dit rien de ta capacité générale.</div>
+      <div><span class="badge neutral">Peu mobilisé dans cette expérience</span> : maîtrise et importance sont alignées, mais toutes deux faibles. Ce savoir-agir n'a pas particulièrement marqué ce projet précis, ce qui ne dit rien de ta capacité générale.</div>
     </div>
   `;
 }
@@ -1123,6 +1124,7 @@ function buildReportHTML(r) {
   .badge.strong { background: #d9f0d9; color: #1f6b1f; }
   .badge.medium { background: #fdf0d5; color: #8a6100; }
   .badge.situational { background: #f4dede; color: #a12b2b; }
+  .badge.neutral { background: #e6e6e6; color: #555; }
   .footer-note { font-size: 11px; color: #999; margin-top: 24px; line-height: 1.6; }
   @media print { body { background: white; } .card { box-shadow: none; border: 1px solid #ddd; } }
 </style>
