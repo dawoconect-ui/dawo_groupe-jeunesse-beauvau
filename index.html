@@ -37,6 +37,10 @@
     font-size: 14px;
     margin-bottom: 24px;
   }
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
   .card {
     background: white;
     border-radius: 10px;
@@ -254,15 +258,15 @@ const COMPETENCES = [
       { angle: "action", text: "Lors du partage des idées entre pilotes, la proposition initiale de mon groupe a été retenue et modifiée par le groupe des pilotes avant d'entrer dans la liste des 36, et j'ai, lors de l'échange suivant, argumenté auprès des autres une seconde fois sur le même sujet." },
       { angle: "perception", text: "Les membres de mon groupe me faisaient confiance pour porter leurs propositions en plénière, parce qu'ils savaient que je ferais entendre leur voix." },
       { angle: "autres", text: "Une personne contactée pour le hackathon a confirmé sa participation après un échange direct avec moi, alors qu'elle hésitait au départ." },
-      { angle: "importance", text: "Avant de défendre une proposition en réunion plénière, j'ai pris sur le temps d'animation de mon groupe pour préparer mes arguments, plutôt que de compter sur l'improvisation." },
+      { angle: "importance", text: "Avant de défendre une proposition en réunion plénière, j'ai pris sur le temps d'animation de mon groupe pour préparer mes arguments, sans me reposer sur l'improvisation." },
       { angle: "action", text: "Nous avons construit et diffusé nous-mêmes un questionnaire destiné aux jeunes, sans appui de communication de la direction générale. Nous avons dû présenter la démarche et donner envie aux jeunes de participer.Le questionnaire a ainsi recueilli plusieurs centaines de réponses en quelques jours." },
-      { angle: "perception", text: "Les autres pilotes de mon groupe m'ont naturellement laissé porter la parole lors des échanges avec les pilotes d'autres groupes." },
+      { angle: "perception", text: "Les autres membres du groupe projet m'ont naturellement laissé porter la parole lors des échanges, que ce soit avec les équipes du hackathon, les équipes du Beauvau de la Sécurité civile, les mentors ou les membres du jury." },
       { angle: "autres", text: "On a choisi la défense de trois mesures prioritaires devant le directeur général de la Sécurité civile, plutôt qu'une présentation neutre du rapport." },
       { angle: "importance", text: "J'ai continué à expliquer une idée à quelqu'un qui n'était pas d'accord avec moi, même si j'ai senti que ça commençait à l'agacer." },
     ],
     refStrategie: "France Stratégie / DARES, famille P4Z (armée, police, pompiers) : encadrement, supervision +1,88 pt au-dessus de la moyenne toutes familles (une même situation mobilise aussi coordonner, organiser, responsabilités et travailler en équipe).",
     refRNE: "RNE Lieutenant et Capitaine SPP (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : développer le collectif en qualité de leader.",
-    exempleOral: "Pour constituer les équipes et les mentors du hackathon, j'ai dû convaincre des personnes extérieures au projet de s'engager sur plusieurs jours, sans les connaître au préalable et sans autorité pour les y obliger. Certaines ont d'abord hésité avant d'accepter après un échange direct avec moi.",
+    exempleOral: "Pour constituer les équipes, les mentors et les experts du hackathon, j'ai dû convaincre des personnes extérieures au projet de s'engager sur plusieurs jours, sans les connaître au préalable et sans autorité pour les y obliger. Certaines ont d'abord hésité avant d'accepter après un échange direct avec moi.",
   },
   {
     key: "coordonner",
@@ -293,10 +297,10 @@ const COMPETENCES = [
       { angle: "perception", text: "Pendant le hackathon, les membres de mon équipe venaient me demander par quoi commencer quand ils avaient plusieurs tâches en même temps." },
       { angle: "autres", text: "On m'a confié une tâche arrivée tard dans le calendrier en sachant que je la caserais sans décaler le reste." },
       { angle: "importance", text: "Pour composer le jury du hackathon, j'ai fait attendre certaines personnes avant de confirmer leur participation, le temps de m'assurer que l'ensemble du jury serait complémentaire." },
-      { angle: "action", text: "J'ai dû changer une étape dans le déroulé du hackathon en cours de route parce qu'il ne correspondait plus à l'avancée réelle de mon équipe." },
+      { angle: "action", text: "J'ai dû changer une étape dans le déroulé du hackathon en cours de route parce qu'il ne correspondait plus à l'avancée réelle de l'équipe dont j'étais référent." },
       { angle: "perception", text: "Les autres pilotes pouvaient s'appuyer sur les échéances que j'avais annoncées." },
       { angle: "autres", text: "Une équipe du hackathon a adapté son propre rythme de travail après que je lui ai communiqué un nouvel ordre de passage." },
-      { angle: "importance", text: "Avant le hackathon, j'ai participé à préparer l'enchaînement de chaque étape, trouver une idée, la construire, la pitcher devant le jury, plutôt que de laisser les équipes avancer au fur et à mesure." },
+      { angle: "importance", text: "Avant le hackathon, au lieu de laisser les équipes avancer au fur et à mesure, j'ai participé à construire l'enchaînement de chaque étape : trouver une idée, la construire, la modéliser et la pitcher devant le jury." },
     ],
     refStrategie: "France Stratégie / DARES, famille P4Z : réponse immédiate à la demande +0,90 pt et encadrement, supervision +1,88 pt, les deux au-dessus de la moyenne toutes familles.",
     refRNE: "RNE Officier d'encadrement, Lieutenant et Capitaine SPP (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : planifier et ordonnancer le projet.",
@@ -310,8 +314,8 @@ const COMPETENCES = [
     items: [
       { angle: "action", text: "Une fois qu'un point de mon groupe a été validé pour la synthèse, je me suis assuré moi-même qu'il n'était pas déformé dans les versions suivantes du document, sans qu'on ait besoin de me le demander." },
       { angle: "perception", text: "Les actions qui m'étaient confiées avançaient sans qu'un des chargés de mission n'ait besoin de reprendre régulièrement leur suivi avec moi." },
-      { angle: "autres", text: "On m'a confié la présentation du premier jour du hackathon devant des équipes et des mentors que je ne connaissais pas, alors que cette prise de parole engageait l'image du projet." },
-      { angle: "importance", text: "Quand une erreur est survenue sur une action que je pilotais, je l'ai assumée devant les autres plutôt que d'expliquer que ce n'était pas entièrement de mon fait." },
+      { angle: "autres", text: "On m'a confié la présentation du premier jour du hackathon devant des équipes, des mentors et des experts que je ne connaissais pas, alors que cette prise de parole engageait l'image du projet." },
+      { angle: "importance", text: "Quand une erreur est survenue sur une action que je pilotais, je l'ai assumée devant les autres, sans expliquer que ce n'était pas entièrement de mon fait." },
       { angle: "action", text: "Au début de la répartition des actions pour préparer le hackathon, alors que ce n'était pas facile à concilier avec mon quotidien, j'ai signalé moi-même que je n'avais pas encore pu amorcer les missions qui m'avaient été confiées." },
       { angle: "perception", text: "Le chargé de mission savait qu'il pouvait me faire confiance pour signaler moi-même un retard sur les missions qui m'étaient confiées, sans avoir besoin de vérifier avant." },
       { angle: "autres", text: "On m'a confié une nouvelle mission sur un second temps fort du projet, après un premier engagement tenu jusqu'au bout." },
@@ -319,7 +323,7 @@ const COMPETENCES = [
     ],
     refStrategie: "France Stratégie / DARES, famille P4Z : supervision, encadrement +1,88 pt au-dessus de la moyenne toutes familles.",
     refRNE: "RNE Officier d'encadrement, Lieutenant et Capitaine SPP (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : encadrer les personnes placées sous son autorité.",
-    exempleOral: "J'ai porté la responsabilité de mener à bien une mission jusqu'à une échéance fixée en amont, sans que quelqu'un d'autre n'ait à me relancer sur mes engagements.",
+    exempleOral: "Entre chaque plénière, je faisais travailler mon groupe sur une tâche à rendre avec une échéance fixée, en mettant à jour le tableau de bord commun avant la séance pour que les chargés de mission puissent animer la plénière, sans qu'ils aient besoin de me relancer.",
   },
   {
     key: "complexite",
@@ -331,9 +335,9 @@ const COMPETENCES = [
       { angle: "perception", text: "D'autres pilotes venaient me voir quand une proposition retenue sur leurs actions risquait d'en contredire une autre action." },
       { angle: "autres", text: "En tant que référent de mon équipe pendant le hackathon, elle me sollicitait pour apporter de la lisibilité et des explications, face aux consignes, aux délais et aux attendus, afin de les aider à faire les bons choix." },
       { angle: "importance", text: "Avant que les 36 propositions ne soient arrêtées, j'ai vérifié qu'aucune ne faisait doublon avec les autres, tout en m'assurant que ce que mon groupe avait identifié comme essentiel soit bien repris." },
-      { angle: "action", text: "Nous avons dû revoir les temps de plénière du hackathon pour concilier la présence des mentors, celle des équipes et les contraintes de planning de chacun." },
-      { angle: "perception", text: "Des pilotes venaient me demander comment faire quand l'organisation des points mentors mêlait les disponibilités des équipes, leurs questions et celles des mentors." },
-      { angle: "autres", text: "Les membres de mon équipe m'ont exposé une situation confuse en me demandant de l'aider à y voir clair." },
+      { angle: "action", text: "Nous avons dû revoir les temps de plénière du hackathon pour concilier la présence des mentors et des experts, celle des équipes et les contraintes de planning de chacun." },
+      { angle: "perception", text: "Des membres des équipes du hackathon venaient me demander comment faire quand l'organisation des points mentors et experts devait prendre en compte les disponibilités des équipes, celles des mentors et des experts, et l'état d'avancement sur leur projet." },
+      { angle: "autres", text: "Lors du hackathon, les membres de l'équipe dont j'étais référent m'ont exposé une situation confuse en me demandant de l'aider à y voir clair." },
       { angle: "importance", text: "Pour construire la Fresque de la Sécurité civile, j'ai pris le temps d'examiner les différentes familles concernées afin que le contenu soit exhaustif, sans tomber dans un niveau de détail impossible à mettre en œuvre concrètement." },
     ],
     refStrategie: "France Stratégie / DARES, famille P4Z : changements organisationnels +0,25 pt au-dessus de la moyenne, un écart réel mais faible, à ne pas présenter comme un argument fort en soi. Le regard des animateurs situe ce savoir-agir comme le plus largement mobilisé de l'aventure (⬤⬤⬤ dans 5 situations distinctes).",
@@ -349,15 +353,15 @@ const COMPETENCES = [
       { angle: "action", text: "J'ai construit une partie du guide destiné aux animateurs de la fresque, en pensant à quelqu'un qui n'avait jamais vu l'outil." },
       { angle: "perception", text: "Le chargé de mission reprenait régulièrement ma façon de formuler les choses pour son propre usage, notamment sur les propositions notées sur post-it dans le tableau de bord virtuel." },
       { angle: "autres", text: "Une partie du rapport présenté au directeur général reprenait presque telle quelle une formulation que j'avais proposée pour résumer une mesure clé." },
-      { angle: "importance", text: "J'ai repris plusieurs fois le règlement du hackathon pour qu'il soit compréhensible sans explication orale, plutôt que de le diffuser dans sa version initiale." },
+      { angle: "importance", text: "J'ai repris plusieurs fois le règlement du hackathon pour qu'il soit compréhensible sans explication orale, au lieu de le diffuser dans sa version initiale." },
       { angle: "action", text: "Dans le dossier de candidature au prix Innovation ENSOSP, j'ai pris en charge la partie qui expliquait le projet, en veillant à ce qu'elle soit compréhensible pour quelqu'un qui le découvrait pour la première fois." },
       { angle: "perception", text: "Le chargé de mission m'a demandé de retravailler une idée en l'explicitant davantage, avant de la partager plus largement." },
       { angle: "autres", text: "Le chargé de mission a repris une formulation que j'avais notée sur un post-it du tableau de bord virtuel pour finaliser une proposition." },
-      { angle: "importance", text: "J'ai préparé un support sur les attentes et le planning pour les mentors non disponibles lors des échanges, en anticipant les questions qu'ils ne pourraient pas nous poser en direct." },
+      { angle: "importance", text: "J'ai participé à la préparation d'un support pour les mentors et les experts du hackathon sur les attendus et les disponibilités nécessaires, en anticipant les questions qu'ils pourraient se poser." },
     ],
     refStrategie: "France Stratégie / DARES, famille P4Z : contact avec le public +1,08 pt au-dessus de la moyenne toutes familles.",
     refRNE: "RNE Lieutenant et Capitaine SPP (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : comprendre et rédiger des écrits.",
-    exempleOral: "J'ai contribué à la rédaction ou à la reformulation d'un contenu écrit, proposition ou support de communication, qui a ensuite été repris par d'autres, sans que le sens initial de mon groupe ne soit perdu.",
+    exempleOral: "J'ai contribué à la rédaction du rapport « Pour que le modèle de la sécurité civile devienne le modèle de la citoyenneté », en expliquant la méthode, la démarche et le détail des 36 propositions.",
   },
   {
     key: "integration",
@@ -365,18 +369,18 @@ const COMPETENCES = [
     definition: "Savoir se mobiliser vers une tâche commune en prenant appui sur les moyens, outils, ressources de chacun et en privilégiant la réussite du groupe.",
     illustration: "J'ai l'esprit d'équipe.",
     items: [
-      { angle: "action", text: "J'ai partagé avec un autre groupe une méthode ou un outil que mon mentor m'avait transmis, plutôt que de la garder pour mon seul groupe." },
-      { angle: "perception", text: "L'équipe que je référençais pendant le hackathon savait qu'elle pouvait compter sur moi au-delà de mon rôle de guide, par exemple pour identifier des mentors susceptibles de l'aider à avancer." },
+      { angle: "action", text: "J'ai partagé avec un autre groupe une méthode ou un outil que mon mentor m'avait transmis, sans la garder pour mon seul groupe." },
+      { angle: "perception", text: "L'équipe dont j'étais référent pendant le hackathon savait qu'elle pouvait compter sur moi au-delà de mon rôle de guide, par exemple pour identifier des mentors ou des experts susceptibles de l'aider à avancer." },
       { angle: "autres", text: "Malgré la distance et le fait de ne pas se connaître au départ, un membre du groupe s'est appuyé sur une proposition que j'avais partagée en visio pour construire la sienne." },
-      { angle: "importance", text: "Sur une question de timing dans l'équipe que je pilotais, je suis allé chercher l'aide de quelqu'un qui maîtrisait le sujet plutôt que de chercher seul une solution." },
-      { angle: "action", text: "Pour construire le dossier de candidature à un prix national, j'ai sollicité les autres pilotes pour compléter ma partie plutôt que de la boucler seul de mon côté." },
+      { angle: "importance", text: "Sur une question de timing dans l'équipe que je pilotais, je n'ai pas cherché la solution seul : je suis allé chercher l'aide de quelqu'un qui maîtrisait le sujet." },
+      { angle: "action", text: "Pour construire le dossier de candidature à un prix national, j'ai sollicité les autres pilotes pour compléter ma partie, sans la boucler seul de mon côté." },
       { angle: "perception", text: "Quand nous devions prioriser les propositions à porter, les autres pouvaient remarquer que je ne votais pas systématiquement pour les miennes." },
-      { angle: "autres", text: "Le chargé de mission a remarqué ma façon de toujours laisser d'abord parler l'équipe dont j'étais référent avant de les accompagner, et s'en est inspiré pour d'autres équipes." },
+      { angle: "autres", text: "Le chargé de mission a remarqué ma façon de toujours laisser d'abord parler l'équipe dont j'étais référent avant de les accompagner, et l'a partagé avec les autres référents." },
       { angle: "importance", text: "À chaque compte rendu des échanges et décisions de mon groupe, j'ai attendu la validation du groupe avant de l'envoyer, même quand le chargé de mission attendait ce retour pour préparer la plénière suivante." },
     ],
     refStrategie: "France Stratégie / DARES, famille P4Z : travail en équipe +2,05 pt au-dessus de la moyenne toutes familles, l'écart le plus net avec la moyenne sur cette dimension.",
     refRNE: "RNE Lieutenant et Capitaine SPP (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : travailler avec et pour le collectif, partager l'intérêt commun, favoriser la bienveillance.",
-    exempleOral: "Pour construire le dossier de candidature à un prix national, j'ai sollicité les autres pilotes pour compléter ma partie plutôt que de la boucler seul de mon côté, et le dossier final réunissait vraiment l'apport de chacun.",
+    exempleOral: "Pour construire le dossier de candidature à un prix national, j'ai sollicité les autres pilotes pour compléter ma partie, sans la boucler seul de mon côté, et le dossier final réunissait vraiment l'apport de chacun.",
   },
   {
     key: "empathie",
@@ -389,13 +393,13 @@ const COMPETENCES = [
       { angle: "autres", text: "Une équipe m'a confié une difficulté qu'elle n'avait pas partagée avec les autres référents." },
       { angle: "importance", text: "Face à une équipe en difficulté sur la répartition de la parole entre ses membres, j'ai laissé passer un moment sans intervenir pour comprendre ce qui se passait vraiment, même si je sentais qu'ils attendaient que je tranche rapidement." },
       { angle: "action", text: "J'ai remarqué qu'un membre d'une équipe se mettait en retrait pendant un échange, et je suis allé lui parler à part avant que la situation ne s'installe." },
-      { angle: "perception", text: "La chargée de mission m'a dit qu'elle avait remarqué que j'avais perçu une tension dans le groupe, la même qu'elle-même avait identifiée de son côté." },
-      { angle: "autres", text: "Un pilote est venu me voir pour comprendre comment désamorcer une tension entre deux membres de son propre groupe." },
+      { angle: "perception", text: "La chargée de mission m'a dit qu'elle avait remarqué que j'avais perçu une tension dans le groupe, qu'elle-même avait identifiée de son côté." },
+      { angle: "autres", text: "Lors du hackathon, un pilote, référent d'une autre équipe, est venu me voir pour savoir comment désamorcer une tension entre deux membres de son groupe." },
       { angle: "importance", text: "Face à une équipe qui se connaissait déjà et une autre qui se découvrait le jour même, confrontées à la même difficulté de répartition de la parole, je ne les ai pas accompagnées de la même manière." },
     ],
     refStrategie: "France Stratégie / DARES, famille P4Z : le score combiné le plus élevé des 39 savoirs-agir, porté par contact avec le public +1,08 pt, travail en équipe +2,04 pt, encadrement +1,88 pt et charge émotionnelle +2,26 pt, tous au-dessus de la moyenne toutes familles.",
     refRNE: "RNE Lieutenant et Capitaine SPP, bloc Santé Sécurité Qualité de Vie en Service (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : avoir un comportement empathique et tolérant envers ses collègues (cohésion, entraide, écoute, solidarité, confiance, loyauté).",
-    exempleOral: "En tant que référent d'une équipe pendant le hackathon, j'ai pris le temps de comprendre ce qui la bloquait avant de proposer une solution, plutôt que d'appliquer la même méthode à toutes les équipes.",
+    exempleOral: "En tant que référent de mon équipe pendant le hackathon, j'ai pris le temps de comprendre ce qui la bloquait avant de proposer une solution, au lieu de dérouler les étapes prévues sans tenir compte de leurs besoins.",
   },
   {
     key: "controle",
@@ -405,12 +409,12 @@ const COMPETENCES = [
     items: [
       { angle: "action", text: "Lors des échanges en plénière, j'ai accepté que le chargé de mission fusionne une proposition que j'avais notée sur post-it avec une autre, sans chercher à la maintenir telle quelle." },
       { angle: "perception", text: "Que ce soit en plénière avec les autres pilotes ou dans mon groupe, chacun revenait facilement vers moi avec un avis différent du mien, sans prendre de précaution particulière avant de le faire." },
-      { angle: "autres", text: "Face au stress de mon équipe au moment de se lancer dans l'inconnu du hackathon, on m'a choisi moi pour faire partie du groupe qui prenait la parole d'ouverture en visio avec les équipes et les mentors." },
+      { angle: "autres", text: "Face au stress de mon équipe au moment de se lancer dans l'inconnu du hackathon, on m'a choisi moi pour faire partie du groupe qui prenait la parole d'ouverture en visio avec les équipes, les mentors et les experts." },
       { angle: "importance", text: "Lors d'une plénière de priorisation des propositions par axe, une idée que je trouvais bonne a été remise en question par le groupe des pilotes, et je l'ai modifiée sans en conclure qu'elle était mauvaise au départ." },
       { angle: "action", text: "Face à un désaccord avec un autre pilote sur une proposition, j'ai pris le temps de comprendre son point de vue avant de maintenir ou de revoir le mien." },
-      { angle: "perception", text: "Quand une tension est apparue entre les membres de l'équipe dont j'étais référent pendant le retard pris sur le hackathon, l'équipe a reconnu, une fois le retard rattrapé, que j'étais resté calme pendant ce moment." },
+      { angle: "perception", text: "Quand une tension est apparue entre les membres de l'équipe dont j'étais référent pendant le retard pris sur le déroulé du hackathon, l'équipe a reconnu, une fois le retard rattrapé, que j'étais resté calme pendant ce moment." },
       { angle: "autres", text: "Le mentor m'a nommé pilote de mon groupe, sachant que je devrais composer avec des personnalités affirmées, des sujets sensibles à traiter et un échéancier serré." },
-      { angle: "importance", text: "J'ai beaucoup argumenté pour une proposition que je portais dans le groupe que j'animais, et quand j'ai vu que le groupe n'était pas en phase avec moi, j'ai lâché l'affaire plutôt que de continuer à insister." },
+      { angle: "importance", text: "J'ai beaucoup argumenté pour une proposition que je portais dans le groupe que j'animais, et quand j'ai vu que le groupe n'était pas en phase avec moi, j'ai lâché l'affaire sans insister davantage." },
     ],
     refStrategie: "France Stratégie / DARES, famille P4Z : le 3e score combiné le plus élevé des 39 savoirs-agir (5,38), porté par contact avec le public +1,08 pt, travail en équipe +2,04 pt et charge émotionnelle +2,26 pt, tous au-dessus de la moyenne toutes familles.",
     refRNE: "RNE Lieutenant et Capitaine SPP, bloc Santé Sécurité Qualité de Vie en Service (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : agir et réagir lors d'une agression physique ou psychologique. Correspondance moins directe et moins explicite que pour les autres savoirs-agir de ce bloc.",
@@ -422,18 +426,18 @@ const COMPETENCES = [
     definition: "Savoir travailler sous la pression, supporter et gérer le stress produit par l'urgence d'une situation ou les pressions venues de l'extérieur.",
     illustration: "Je sais garder mon calme en toute circonstance.",
     items: [
-      { angle: "action", text: "Pendant l'évènement, quand un imprévu est survenu, j'ai pris le temps de vérifier la situation avant de réagir, plutôt que de répondre dans l'urgence immédiate." },
+      { angle: "action", text: "Pendant l'évènement, quand un imprévu est survenu, j'ai pris le temps de vérifier la situation, sans me précipiter pour réagir dans l'urgence." },
       { angle: "perception", text: "D'autres pilotes se sont tournés vers moi au moment où un imprévu ou une échéance serrée mettait le groupe sous tension." },
-      { angle: "autres", text: "Juste avant le début du hackathon, le chargé de mission m'a confié l'appel d'un mentor et d'un membre du jury pour ajuster les horaires." },
+      { angle: "autres", text: "Suite au retard pris par le jury lors de son brief interne, la chargée de mission m'a appelé juste avant le pitch pour ajuster les horaires de passage de l'équipe dont j'étais référent, sachant que je resterais solide pendant que l'équipe, elle, paniquait face au retard." },
       { angle: "importance", text: "Au moment de valider les 36 propositions, alors que le délai était court, j'ai quand même pris le temps de mesurer les conséquences de ce choix, parce que c'était pour moi une étape structurante du projet." },
       { angle: "action", text: "Face à un bug informatique pendant le hackathon en distanciel, j'ai continué à accompagner mon équipe le temps de trouver une solution." },
       { angle: "perception", text: "On me considérait comme quelqu'un vers qui on pouvait se tourner quand la pression montait." },
-      { angle: "autres", text: "Le chargé de mission est venu me demander conseil face à un blocage humain dans une équipe." },
-      { angle: "importance", text: "Lorsqu'un mentor qui avait donné son accord n'a plus été disponible au dernier moment, j'ai pris le temps de chercher la solution la plus adaptée avant de décider comment réorganiser la suite." },
+      { angle: "autres", text: "La chargée de mission est venue me demander un conseil face à un blocage humain dans une équipe." },
+      { angle: "importance", text: "Lorsqu'un mentor ou un expert qui avait donné son accord n'a plus été disponible au dernier moment pour l'équipe dont j'étais référent, j'ai pris le temps de chercher la solution la plus adaptée avant de décider comment réorganiser la suite." },
     ],
     refStrategie: "France Stratégie / DARES, famille P4Z : charge émotionnelle +2,26 pt au-dessus de la moyenne toutes familles, l'écart le plus marqué de cette famille de métiers.",
     refRNE: "RNE Lieutenant et Capitaine SPP, bloc Santé Sécurité Qualité de Vie en Service (DGSCGC, 30/04/2020, texte identique dans les deux référentiels) : adapter et entretenir son potentiel physiologique, physique, psychologique et social, agir et réagir lors d'une agression psychologique.",
-    exempleOral: "Face à une échéance fixée par une instance extérieure au groupe, comme la lettre de mission du directeur général, j'ai continué à avancer sur les autres tâches en cours sans que cette pression ne prenne toute la place, y compris quand un imprévu est venu s'ajouter le jour de l'évènement.",
+    exempleOral: "En tant que référent d'une équipe du hackathon que je ne connaissais pas et qui travaillait à distance, j'ai dû lui expliquer le déroulé du hackathon et la faire adhérer à des outils d'intelligence collective, alors que je n'étais moi-même pas formé à ce type d'animation.",
   },
 ];
 
@@ -471,7 +475,7 @@ const SITUATIONS_ANIMATEURS = [
   },
   {
     titre: "Transformer une réflexion en projet",
-    texte: "Le hackathon n'était pas simplement une tâche qui leur avait été confiée. Les participants ont proposé d'en faire un projet et ont ensuite contribué à sa conception et à sa réalisation : défini les étapes, réparti les responsabilités, recherché et recruté les équipes et les mentors, sélectionné des profils, construit le programme, organisé le séquençage, assuré la communication, pris des décisions organisationnelles.",
+    texte: "Le hackathon n'était pas simplement une tâche qui leur avait été confiée. Les participants ont proposé d'en faire un projet et ont ensuite contribué à sa conception et à sa réalisation : défini les étapes, réparti les responsabilités, recherché et recruté les équipes, les mentors et les experts, sélectionné des profils, construit le programme, organisé le séquençage, assuré la communication, pris des décisions organisationnelles.",
     savoirsAgir: "Déterminer l'objectif · Avoir l'esprit créatif · Avoir le sens des responsabilités · Organiser et prioriser · Se déterminer entre deux ou plusieurs choses · Être persévérant",
     observation: "Les participants sont passés d'une logique de contribution à une logique de conception et de conduite de projet. Ils ont transformé une intention en dispositif opérationnel.",
   },
@@ -495,7 +499,7 @@ const SITUATIONS_ANIMATEURS = [
   },
   {
     titre: "Convaincre et défendre une idée",
-    texte: "Les participants ont été amenés à convaincre différents interlocuteurs : mobilisation des participants, recrutement des équipes, recrutement des mentors, présentation au directeur général, défense des trois mesures clés, candidature au prix Innovation ENSOSP, présentation devant le jury.",
+    texte: "Les participants ont été amenés à convaincre différents interlocuteurs : mobilisation des participants, recrutement des équipes, recrutement des mentors et des experts, présentation au directeur général, défense des trois mesures clés, candidature au prix Innovation ENSOSP, présentation devant le jury.",
     savoirsAgir: "Convaincre · Transmettre les informations, écrire · Évaluer l'information · Utiliser l'information avec justesse · Avoir confiance en soi · Avoir l'esprit constructif",
     observation: "Les participants ont dû adapter leur argumentation à différents interlocuteurs et défendre des choix collectifs dans des contextes où l'adhésion n'était pas acquise.",
   },
@@ -613,7 +617,7 @@ function buildRegardAnimateurs() {
       <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:4px;">Ce que l'expérience Beauvau permet d'observer</div>
       <div style="font-size:12px; font-weight:700; color:#888; text-transform:uppercase; letter-spacing:0.03em; margin-bottom:8px;">Regard des animateurs sur le parcours du Groupe Jeunesse</div>
       <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Cette analyse complète l'auto-évaluation réalisée par les participants. Elle repose sur les situations vécues au cours du projet Groupe Jeunesse Beauvau de la Sécurité civile et sur les comportements observables dans les différentes étapes de l'aventure.</p>
-      <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Elle ne constitue pas une évaluation individuelle et ne permet pas d'attribuer un niveau de maîtrise à chaque participant. Elle vise à identifier, à partir des situations et des comportements observés, les savoirs-agir du référentiel dawo que l'expérience a particulièrement sollicités.</p>
+      <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Elle ne constitue pas une évaluation individuelle et ne permet pas d'attribuer un indice de mobilisation à chaque participant. Elle vise à identifier, à partir des situations et des comportements observés, les savoirs-agir du référentiel dawo que l'expérience a particulièrement sollicités.</p>
       <p style="font-size:13px; line-height:1.55; margin:0;">L'intérêt de cette lecture est de mettre en lumière des capacités qui ont pu être mobilisées dans l'action sans nécessairement être identifiées comme des compétences par les participants eux-mêmes.</p>
     </div>
     <div class="card" style="margin-bottom:16px;">
@@ -623,7 +627,7 @@ function buildRegardAnimateurs() {
       <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:4px;">Cartographie des savoirs-agir mobilisés dans l'expérience</div>
       <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Cette cartographie met en correspondance les situations vécues au cours du projet avec les savoirs-agir du référentiel dawo. Elle ne constitue pas une évaluation des participants. Elle permet de visualiser les savoirs-agir particulièrement sollicités par l'expérience et de distinguer ceux pour lesquels les situations observées apportent des éléments d'analyse plus ou moins importants.</p>
       <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Un même savoir-agir peut être mobilisé dans plusieurs situations, comme une même situation peut mobiliser plusieurs savoirs-agir.</p>
-      <p style="font-size:12px; color:#888; margin:0 0 4px;">Légende : ●●● fortement mobilisé (à plusieurs moments) · ●● mobilisé de manière significative · ● mobilisé ponctuellement · — pas suffisamment d'éléments pour l'identifier</p>
+      <p style="font-size:12px; color:#888; margin:0 0 4px;">Légende : ●●● fortement mobilisé (à plusieurs moments) · ●● mobilisé de manière significative · ● mobilisé ponctuellement, pas suffisamment d'éléments pour l'identifier</p>
       ${cartoHtml}
     </div>
     <div class="card" style="margin-bottom:16px;">
@@ -646,10 +650,21 @@ function buildRegardAnimateurs() {
 function buildSynthesis(r) {
   const withData = r.results.filter(c => c.maitrise !== null && c.importance !== null);
 
-  const APPUI_THRESHOLD = 3.5; // moyenne (maîtrise + importance)/2 minimale pour compter comme point d'appui
+  const APPUI_THRESHOLD = 3.5; // moyenne (indice de mobilisation + importance)/2 minimale pour compter comme point d'appui
   const GAP_THRESHOLD = 0.75;  // seuil conventionnel retenu pour cette expérimentation, pas un seuil scientifiquement établi (2 items par dimension)
 
+  // Un même savoir-agir ne doit jamais apparaître à la fois en point d'appui (déjà solide)
+  // et en zone de développement (indice de mobilisation en retrait par rapport à l'effort investi) :
+  // ce serait un message contradictoire. La zone de développement est prioritaire sur le
+  // point d'appui dès qu'un écart importance / indice de mobilisation significatif existe.
+  const vigilance = withData
+    .filter(c => (c.importance - c.maitrise) >= GAP_THRESHOLD)
+    .sort((a, b) => (b.importance - b.maitrise) - (a.importance - a.maitrise))
+    .slice(0, 3);
+  const vigilanceKeys = new Set(vigilance.map(c => c.key));
+
   const appui = withData
+    .filter(c => !vigilanceKeys.has(c.key))
     .filter(c => (c.maitrise + c.importance) / 2 >= APPUI_THRESHOLD)
     .sort((a, b) => (b.maitrise + b.importance) - (a.maitrise + a.importance))
     .slice(0, 3);
@@ -658,11 +673,6 @@ function buildSynthesis(r) {
     .filter(c => c.action !== null && c.reconnaissance !== null && c.perception !== null)
     .filter(c => ((c.action + c.reconnaissance) / 2 - c.perception) >= GAP_THRESHOLD)
     .sort((a, b) => (((b.action + b.reconnaissance) / 2 - b.perception)) - (((a.action + a.reconnaissance) / 2 - a.perception)))
-    .slice(0, 3);
-
-  const vigilance = withData
-    .filter(c => (c.importance - c.maitrise) >= GAP_THRESHOLD)
-    .sort((a, b) => (b.importance - b.maitrise) - (a.importance - a.maitrise))
     .slice(0, 3);
 
   function list(items, emptyMsg) {
@@ -676,7 +686,7 @@ function buildSynthesis(r) {
     <p style="font-size:11px; color:#999; font-style:italic; margin:0 0 12px;">Chaque dimension repose sur deux questions distinctes : les écarts ci-dessous restent des repères indicatifs, pas des mesures de précision absolue.</p>
     <div style="margin-top:14px;">
       <div style="font-size:13px; font-weight:700; color:var(--navy);">Tes points d'appui</div>
-      <div style="font-size:12px; color:#666; margin-bottom:4px;">Les savoirs-agir pour lesquels ton niveau de maîtrise est le plus élevé, et pour lesquels ton expérience montre que tu es prêt à faire des efforts concrets pour les mobiliser.</div>
+      <div style="font-size:12px; color:#666; margin-bottom:4px;">Les savoirs-agir pour lesquels ton indice de mobilisation est le plus élevé, et pour lesquels ton expérience montre que tu es prêt à faire des efforts concrets pour les mobiliser.</div>
       ${list(appui, "Aucun savoir-agir ne se détache nettement sur ce critère pour cette passation.")}
     </div>
     <div>
@@ -686,8 +696,8 @@ function buildSynthesis(r) {
     </div>
     <div>
       <div style="font-size:13px; font-weight:700; color:var(--navy);">Tes zones de développement</div>
-      <div style="font-size:12px; color:#666; margin-bottom:4px;">Des savoirs-agir pour lesquels ton expérience montre que tu es prêt à faire des efforts concrets pour les mobiliser, mais pour lesquels ton niveau de maîtrise déclaré reste plus modéré.</div>
-      ${list(vigilance, "Aucun écart marqué entre les efforts concrets consentis et le niveau de maîtrise déclaré n'est ressorti.")}
+      <div style="font-size:12px; color:#666; margin-bottom:4px;">Des savoirs-agir pour lesquels ton expérience montre que tu es prêt à faire des efforts concrets pour les mobiliser, mais pour lesquels ton indice de mobilisation déclaré reste plus modéré.</div>
+      ${list(vigilance, "Aucun écart marqué entre les efforts concrets consentis et l'indice de mobilisation déclaré n'est ressorti.")}
     </div>
     <p style="font-size:12px; color:#777; margin-top:14px; margin-bottom:0; font-style:italic;">L'objectif n'est pas de produire une note ou un classement. L'objectif est de transformer une expérience vécue en compétences identifiables, explicables et valorisables.</p>
   `;
@@ -737,7 +747,7 @@ function scoreLabel(gap, maitrise) {
   if (gap <= 0.7) return {
     text: "Compétence identifiée",
     cls: "strong",
-    explain: "Maîtrise et importance sont alignées. Le savoir-agir est clairement identifié dans l'expérience vécue.",
+    explain: "L'indice de mobilisation et l'importance sont alignés. Le savoir-agir est clairement identifié dans l'expérience vécue.",
   };
   if (gap <= 1.5) return {
     text: "Compétence à faire émerger",
@@ -754,10 +764,10 @@ function scoreLabel(gap, maitrise) {
 function buildStatusLegend() {
   return `
     <div style="font-size:13px; line-height:1.6;">
-      <div style="margin-bottom:6px;"><span class="badge strong">Compétence identifiée</span> : maîtrise et importance sont alignées, et toutes deux nettement présentes. Le savoir-agir est clairement identifié dans l'expérience vécue.</div>
+      <div style="margin-bottom:6px;"><span class="badge strong">Compétence identifiée</span> : l'indice de mobilisation et l'importance sont alignés, et tous deux nettement présents. Le savoir-agir est clairement identifié dans l'expérience vécue.</div>
       <div style="margin-bottom:6px;"><span class="badge medium">Compétence à faire émerger</span> : le savoir-agir apparaît dans l'expérience mais mérite d'être davantage conscientisé ou explicité.</div>
       <div style="margin-bottom:6px;"><span class="badge situational">Savoir-agir contextualisé</span> : le savoir-agir apparaît dans les situations vécues du projet, mais il est trop tôt pour conclure à sa transférabilité dans d'autres contextes.</div>
-      <div><span class="badge neutral">Peu mobilisé dans cette expérience</span> : maîtrise et importance sont alignées, mais toutes deux faibles. Ce savoir-agir n'a pas particulièrement marqué ce projet précis, ce qui ne dit rien de ta capacité générale.</div>
+      <div><span class="badge neutral">Peu mobilisé dans cette expérience</span> : l'indice de mobilisation et l'importance sont alignés, mais tous deux faibles. Ce savoir-agir n'a pas particulièrement marqué ce projet précis, ce qui ne dit rien de ta capacité générale.</div>
     </div>
   `;
 }
@@ -799,7 +809,7 @@ function computeResults(pool, answers) {
     const perception = avg(c.perceptionVals);
     const reconnaissance = avg(c.autresVals);
     const importance = avg(c.importanceVals);
-    // maîtrise = moyenne des 3 dimensions déclaratives, chacune pesant pour un tiers
+    // indice de mobilisation (maitrise) = moyenne des 3 dimensions déclaratives, chacune pesant pour un tiers
     // quel que soit le nombre de questions qui la composent (pas une moyenne des items bruts).
     const dims = [action, perception, reconnaissance].filter(v => v !== null);
     const maitrise = dims.length ? dims.reduce((a, b) => a + b, 0) / dims.length : null;
@@ -818,10 +828,10 @@ function renderStart() {
   app.innerHTML = `
     <img src="${LOGO_DATA_URI}" alt="dawo" style="width:72px; height:72px; display:block; margin-bottom:8px;" />
     <h1>Auto-évaluation dawo</h1>
-    <div class="sub">Beauvau Sécurité Civile, Groupe Jeunesse, rapport du projet J'IMPACT ma Sécurité Civile (hackathon et fresque)</div>
+    <div class="sub">Beauvau Sécurité Civile, Groupe Jeunesse, rapport « pour que le modèle de la sécurité civile devienne le modèle de la citoyenneté », projet J'IMPACT ma Sécurité Civile (hackathon et fresque)</div>
     <div class="card">
       <p style="font-size:14px; line-height:1.6; margin-top:0;">
-        Dans le cadre du Beauvau de la Sécurité civile, 70 jeunes répartis en 12 groupes ont produit 36 propositions, puis porté le projet J'IMPACT ma Sécurité Civile : le hackathon et la fresque de la Sécurité civile. En tant que pilote, tu as porté ce travail : animation de ton groupe, partage et synthèse des idées, lancement d'un questionnaire pour recueillir l'avis des jeunes, élaboration du déroulé du hackathon et construction des animations, recherche de mentors et d'équipes, communication avant, pendant et après l'évènement, rôle de référent d'une équipe, gestion des imprévus le jour J.
+        Dans le cadre du Beauvau de la Sécurité civile, 70 jeunes répartis en 12 groupes ont produit 36 propositions, puis porté le projet J'IMPACT ma Sécurité Civile : le hackathon et la fresque de la Sécurité civile. En tant que pilote, tu as contribué à ce travail : animation de ton groupe, partage et synthèse des idées, lancement d'un questionnaire pour recueillir l'avis des jeunes, élaboration du déroulé du hackathon et construction des animations, recherche de mentors, d'experts et d'équipes, communication avant, pendant et après l'évènement, rôle de référent d'une équipe, gestion des imprévus le jour J.
       </p>
       <p style="font-size:14px; line-height:1.6;">
         Ce questionnaire dawo t'aide à <strong>identifier</strong> les compétences que tu as mobilisées sans forcément t'en rendre compte, à te les <strong>révéler</strong>, pour ensuite les <strong>renforcer</strong> et les présenter à l'oral de ton concours officier (lieutenant / capitaine).
@@ -1028,7 +1038,7 @@ function downloadCSVRow(r) {
 function buildReportText(r) {
   const lines = [];
   lines.push(`Rapport d'auto-évaluation dawo, ${r.prenom}`);
-  lines.push(`Beauvau Sécurité Civile, Groupe Jeunesse, rapport du projet J'IMPACT ma Sécurité Civile (hackathon et fresque de la Sécurité civile)`);
+  lines.push(`Beauvau Sécurité Civile, Groupe Jeunesse, rapport « pour que le modèle de la sécurité civile devienne le modèle de la citoyenneté », projet J'IMPACT ma Sécurité Civile (hackathon et fresque de la Sécurité civile)`);
   lines.push(`Date : ${new Date(r.date).toLocaleString("fr-FR")}`);
   lines.push("");
   lines.push("Ce rapport suit la démarche dawo : identifier les compétences mobilisées dans l'action, les révéler (les rendre conscientes et formulables), puis les renforcer en vue de l'oral officier.");
@@ -1109,6 +1119,7 @@ function buildReportHTML(r) {
   :root { --navy: #231F20; --accent: #15A452; --grey: #f2f2f2; }
   * { box-sizing: border-box; }
   body { font-family: -apple-system, "Segoe UI", Arial, sans-serif; color: #22262b; margin: 0; padding: 24px; background: #fafafa; }
+  p { text-align: justify; text-justify: inter-word; }
   .wrap { max-width: 720px; margin: 0 auto; }
   .card { background: white; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 24px; margin-bottom: 16px; }
   h1 { font-size: 20px; color: var(--navy); margin: 8px 0 4px; }
@@ -1133,7 +1144,7 @@ function buildReportHTML(r) {
 <div class="wrap">
   <img src="${LOGO_DATA_URI}" alt="dawo" style="width:64px; height:64px; display:block; margin-bottom:8px;" />
   <h1>Résultats : ${r.prenom}</h1>
-  <div class="sub">Beauvau Sécurité Civile, Groupe Jeunesse, rapport du projet J'IMPACT ma Sécurité Civile (hackathon et fresque). Identifier, révéler, renforcer.</div>
+  <div class="sub">Beauvau Sécurité Civile, Groupe Jeunesse, rapport « pour que le modèle de la sécurité civile devienne le modèle de la citoyenneté », projet J'IMPACT ma Sécurité Civile (hackathon et fresque). Identifier, révéler, renforcer.</div>
   <div class="card">
     <div style="font-weight:700; color:var(--navy); margin-bottom:4px;">Pourquoi 10 savoirs-agir ?</div>
     <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Le référentiel dawo compte 39 savoirs-agir répartis en trois axes.</p>
@@ -1149,7 +1160,7 @@ function buildReportHTML(r) {
     <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:8px;">Comment le lien a été construit</div>
     <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Pour chaque situation de travail mesurée par l'enquête Conditions de travail de la DARES (encadrement, travail en équipe, contact avec le public, charge émotionnelle...), un tableau croisé indique quels savoirs-agir du référentiel dawo cette situation mobilise. Une situation peut en mobiliser plusieurs à la fois : encadrer une équipe, par exemple, sollicite en même temps la coordination, l'organisation et la capacité à convaincre.</p>
     <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">La DARES fournit ensuite, pour chaque situation, un score moyen propre à la famille professionnelle P4Z (armée, police, pompiers), comparé à la moyenne toutes familles confondues. Un écart positif signifie que cette situation revient plus souvent dans ce métier que dans l'ensemble des métiers étudiés par l'enquête.</p>
-    <p style="font-size:13px; line-height:1.55; margin:0;">En croisant les deux, chaque savoir-agir répond à une question précise : apparaît-il dans une situation que ce métier rencontre plus souvent que la moyenne ? C'est le cas pour 9 des 10 retenus ici. Un seul (appréhender la complexité) tient sur un écart réel mais faible : on te le dit plutôt que de le maquiller en argument fort.</p>
+    <p style="font-size:13px; line-height:1.55; margin:0;">En croisant les deux, chaque savoir-agir répond à une question précise : apparaît-il dans une situation que ce métier rencontre plus souvent que la moyenne ? C'est le cas pour 9 des 10 retenus ici. Un seul (appréhender la complexité) tient sur un écart réel mais faible : on te le dit tel quel, sans le maquiller en argument fort.</p>
   </div>
   <div class="card">
     <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:8px;">Comment dawo construit ton profil</div>
@@ -1158,14 +1169,14 @@ function buildReportHTML(r) {
     <p style="font-size:13px; line-height:1.5; margin:0 0 6px;"><strong>La perception</strong> : la manière dont tu penses être perçu par les autres dans ce savoir-agir.</p>
     <p style="font-size:13px; line-height:1.5; margin:0 0 6px;"><strong>Le regard des autres</strong> : les situations dans lesquelles d'autres participants t'ont sollicité, identifié ou reconnu pour ce savoir-agir.</p>
     <p style="font-size:13px; line-height:1.5; margin:0 0 8px;"><strong>L'importance</strong> : les situations vécues où tu as accepté un coût, du temps, de la tension, un risque, pour donner la priorité à ce savoir-agir plutôt qu'à une option plus simple.</p>
-    <p style="font-size:13px; line-height:1.55; margin:0;">La maîtrise affichée sur ton profil est la moyenne de trois de ces quatre dimensions : ce que tu as fait, comment tu penses être perçu, ce que le collectif semble avoir reconnu. Ce n'est donc pas une maîtrise au sens psychométrique ou professionnel : c'est un indice de mobilisation perçue et reconnue dans cette expérience précise, pas un jugement général sur qui tu es.</p>
+    <p style="font-size:13px; line-height:1.55; margin:0;">L'indice de mobilisation affiché sur ton profil est la moyenne de trois de ces quatre dimensions : ce que tu as fait, comment tu penses être perçu, ce que le collectif semble avoir reconnu. Ce n'est pas une évaluation au sens psychométrique ou professionnel : c'est un indice de mobilisation perçue et reconnue dans cette expérience précise, pas un jugement général sur qui tu es.</p>
   </div>
   <div style="background:var(--navy); color:white; padding:14px 18px; border-radius:8px; margin-bottom:16px;">
     <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent); margin-bottom:4px;">Partie 1</div>
     <div style="font-size:16px; font-weight:700;">Ton auto-évaluation dawo</div>
   </div>
   <div class="card" style="text-align:center;">
-    <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:6px;">Ton profil de maîtrise</div>
+    <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:6px;">Ton indice de mobilisation</div>
     ${buildRadarSVG(r)}
     ${buildRadarLegend()}
   </div>
@@ -1274,7 +1285,7 @@ function renderResult() {
       : "Une tentative d'enregistrement automatique a été faite. Je ne peux pas confirmer si elle a réussi : en cas de doute, utilise les options de secours ci-dessous.";
   app.innerHTML = `
     <h1>Résultats : ${r.prenom}</h1>
-    <div class="sub">Identifier, révéler, renforcer : synthèse maîtrise / importance, avec repères métier, référentiel du grade et exemple à personnaliser</div>
+    <div class="sub">Identifier, révéler, renforcer : synthèse indice de mobilisation / importance, avec repères métier, référentiel du grade et exemple à personnaliser</div>
     <div class="warn">${sheetNote}</div>
     <div class="card" style="margin-bottom:12px;">
       <p style="font-size:13px; line-height:1.55; margin:0;">
@@ -1285,7 +1296,7 @@ function renderResult() {
       <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:8px;">Comment le lien a été construit</div>
       <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">Pour chaque situation de travail mesurée par l'enquête Conditions de travail de la DARES (encadrement, travail en équipe, contact avec le public, charge émotionnelle...), un tableau croisé indique quels savoirs-agir du référentiel dawo cette situation mobilise. Une situation peut en mobiliser plusieurs à la fois : encadrer une équipe, par exemple, sollicite en même temps la coordination, l'organisation et la capacité à convaincre.</p>
       <p style="font-size:13px; line-height:1.55; margin:0 0 8px;">La DARES fournit ensuite, pour chaque situation, un score moyen propre à la famille professionnelle P4Z (armée, police, pompiers), comparé à la moyenne toutes familles confondues. Un écart positif signifie que cette situation revient plus souvent dans ce métier que dans l'ensemble des métiers étudiés par l'enquête.</p>
-      <p style="font-size:13px; line-height:1.55; margin:0;">En croisant les deux, chaque savoir-agir répond à une question précise : apparaît-il dans une situation que ce métier rencontre plus souvent que la moyenne ? C'est le cas pour 9 des 10 retenus ici. Un seul (appréhender la complexité) tient sur un écart réel mais faible : on te le dit plutôt que de le maquiller en argument fort.</p>
+      <p style="font-size:13px; line-height:1.55; margin:0;">En croisant les deux, chaque savoir-agir répond à une question précise : apparaît-il dans une situation que ce métier rencontre plus souvent que la moyenne ? C'est le cas pour 9 des 10 retenus ici. Un seul (appréhender la complexité) tient sur un écart réel mais faible : on te le dit tel quel, sans le maquiller en argument fort.</p>
     </div>
     <div class="card" style="margin-bottom:12px;">
       <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:8px;">Comment dawo construit ton profil</div>
@@ -1294,14 +1305,14 @@ function renderResult() {
       <p style="font-size:13px; line-height:1.5; margin:0 0 6px;"><strong>La perception</strong> : la manière dont tu penses être perçu par les autres dans ce savoir-agir.</p>
       <p style="font-size:13px; line-height:1.5; margin:0 0 6px;"><strong>Le regard des autres</strong> : les situations dans lesquelles d'autres participants t'ont sollicité, identifié ou reconnu pour ce savoir-agir.</p>
       <p style="font-size:13px; line-height:1.5; margin:0 0 8px;"><strong>L'importance</strong> : les situations vécues où tu as accepté un coût, du temps, de la tension, un risque, pour donner la priorité à ce savoir-agir plutôt qu'à une option plus simple.</p>
-      <p style="font-size:13px; line-height:1.55; margin:0;">La maîtrise affichée sur ton profil est la moyenne de trois de ces quatre dimensions : ce que tu as fait, comment tu penses être perçu, ce que le collectif semble avoir reconnu. Ce n'est donc pas une maîtrise au sens psychométrique ou professionnel : c'est un indice de mobilisation perçue et reconnue dans cette expérience précise, pas un jugement général sur qui tu es.</p>
+      <p style="font-size:13px; line-height:1.55; margin:0;">L'indice de mobilisation affiché sur ton profil est la moyenne de trois de ces quatre dimensions : ce que tu as fait, comment tu penses être perçu, ce que le collectif semble avoir reconnu. Ce n'est pas une évaluation au sens psychométrique ou professionnel : c'est un indice de mobilisation perçue et reconnue dans cette expérience précise, pas un jugement général sur qui tu es.</p>
     </div>
     <div style="background:var(--navy); color:white; padding:14px 18px; border-radius:8px; margin-bottom:12px;">
       <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent); margin-bottom:4px;">Partie 1</div>
       <div style="font-size:16px; font-weight:700;">Ton auto-évaluation dawo</div>
     </div>
     <div class="card" style="margin-bottom:12px;">
-      <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:6px; text-align:center;">Ton profil de maîtrise</div>
+      <div style="font-size:14px; font-weight:700; color:var(--navy); margin-bottom:6px; text-align:center;">Ton indice de mobilisation</div>
       ${buildRadarSVG(r)}
       ${buildRadarLegend()}
     </div>
