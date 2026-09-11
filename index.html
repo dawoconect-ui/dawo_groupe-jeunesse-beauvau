@@ -979,7 +979,23 @@ const SHEET_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbyAHfPpYp5Ioni
 // expérimentation à effectif restreint, pas pour protéger des données sensibles à grande échelle.
 const SHEET_SHARED_SECRET = "beauvau-dawo-2025";
 
-async function sendToSheet(r, calibration) {
+function buildCanonicalAnswerKeys() {
+  // Ordre fixe, indépendant du mélange aléatoire des questions à l'écran,
+  // pour pouvoir recroiser les réponses détaillées après coup (calcul de fiabilité).
+  const labelMap = { action: "action", perception: "perception", autres: "reconnaissance", importance: "importance" };
+  const keys = [];
+  COMPETENCES.forEach(c => {
+    const counters = {};
+    c.items.forEach((it, idx) => {
+      const label = labelMap[it.angle];
+      counters[label] = (counters[label] || 0) + 1;
+      keys.push({ id: c.key + "_" + it.angle + "_" + idx, col: c.key + "_" + label + counters[label] });
+    });
+  });
+  return keys;
+}
+
+async function sendToSheet(r, calibration, answers) {
   if (SHEET_WEBAPP_URL === "URL_A_DEFINIR") return { ok: false, skipped: true };
   const byKey = {};
   r.results.forEach(c => { byKey[c.key] = c; });
@@ -995,6 +1011,9 @@ async function sendToSheet(r, calibration) {
   };
   ["convaincre", "coordonner", "organiser", "responsabilites", "complexite", "ecrire", "integration", "empathie", "stress", "controle"].forEach(k => {
     payload[k] = byKey[k] && byKey[k].maitrise !== null ? Number(byKey[k].maitrise.toFixed(1)) : "";
+  });
+  buildCanonicalAnswerKeys().forEach(({ id, col }) => {
+    payload[col] = (answers && answers[id] !== undefined) ? answers[id] : "";
   });
   try {
     await fetch(SHEET_WEBAPP_URL, {
@@ -1024,7 +1043,7 @@ async function finishQuiz() {
     try {
       await appStorage.delete("progression:" + normalizePrenom(state.prenom));
     } catch (e) { /* rien à nettoyer */ }
-    record.sheetResult = await sendToSheet(record, state.calibration);
+    record.sheetResult = await sendToSheet(record, state.calibration, state.answers);
   }
   state.lastResult = record;
   state.screen = "result";
