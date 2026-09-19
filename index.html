@@ -653,26 +653,28 @@ function buildSynthesis(r) {
   const APPUI_THRESHOLD = 3.5; // moyenne (indice de mobilisation + importance)/2 minimale pour compter comme point d'appui
   const GAP_THRESHOLD = 0.75;  // seuil conventionnel retenu pour cette expérimentation, pas un seuil scientifiquement établi (2 items par dimension)
 
-  // Un même savoir-agir ne doit jamais apparaître à la fois en point d'appui (déjà solide)
-  // et en zone de développement (indice de mobilisation en retrait par rapport à l'effort investi) :
-  // ce serait un message contradictoire. La zone de développement est prioritaire sur le
-  // point d'appui dès qu'un écart importance / indice de mobilisation significatif existe.
+  // Un même savoir-agir ne doit jamais apparaître dans deux des trois catégories à la fois,
+  // ce serait un message contradictoire pour le jeune qui lit son rapport. Priorité : zone de
+  // développement (l'écart importance / indice de mobilisation, signal le plus actionnable),
+  // puis potentiel à faire émerger, puis point d'appui.
   const vigilance = withData
     .filter(c => (c.importance - c.maitrise) >= GAP_THRESHOLD)
     .sort((a, b) => (b.importance - b.maitrise) - (a.importance - a.maitrise))
     .slice(0, 3);
   const vigilanceKeys = new Set(vigilance.map(c => c.key));
 
-  const appui = withData
-    .filter(c => !vigilanceKeys.has(c.key))
-    .filter(c => (c.maitrise + c.importance) / 2 >= APPUI_THRESHOLD)
-    .sort((a, b) => (b.maitrise + b.importance) - (a.maitrise + a.importance))
-    .slice(0, 3);
-
   const emerger = withData
+    .filter(c => !vigilanceKeys.has(c.key))
     .filter(c => c.action !== null && c.reconnaissance !== null && c.perception !== null)
     .filter(c => ((c.action + c.reconnaissance) / 2 - c.perception) >= GAP_THRESHOLD)
     .sort((a, b) => (((b.action + b.reconnaissance) / 2 - b.perception)) - (((a.action + a.reconnaissance) / 2 - a.perception)))
+    .slice(0, 3);
+  const emergerKeys = new Set(emerger.map(c => c.key));
+
+  const appui = withData
+    .filter(c => !vigilanceKeys.has(c.key) && !emergerKeys.has(c.key))
+    .filter(c => (c.maitrise + c.importance) / 2 >= APPUI_THRESHOLD)
+    .sort((a, b) => (b.maitrise + b.importance) - (a.maitrise + a.importance))
     .slice(0, 3);
 
   function list(items, emptyMsg) {
